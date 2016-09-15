@@ -1,0 +1,2 @@
+%{"gproc": {:hex, :gproc, "0.6.1"},
+  "hedwig": {:hex, :hedwig, "1.0.0-rc.4"}}

@@ -1,9 +1,0 @@
-version: '2'
-services:
-  web:
-    build: .
-    command: bundle exec ruby app.rb'
-    volumes:
-      - .:/code
-    ports:
-      - "5555:3000"

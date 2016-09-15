@@ -1,12 +1,12 @@
-FROM ruby:2.3.1
+FROM elixir:1.3
 
 ENV APP_HOME /code
 
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
-
-ADD Gemfile* $APP_HOME/
 ADD . $APP_HOME
 
-RUN bundle install
+RUN /usr/local/bin/mix local.hex --force && \
+    /usr/local/bin/mix local.rebar --force \
+    mix deps.get
 
